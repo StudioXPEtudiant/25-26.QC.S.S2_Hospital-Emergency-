@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://y6uhsx3ywms4"]
+[gd_scene load_steps=13 format=3 uid="uid://y6uhsx3ywms4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_he8bn"]
 margin = 0.0
@@ -30,6 +30,23 @@ radius = 0.2
 height = 1.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ero2x"]
+margin = 0.0
+radius = 0.2
+height = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2t1d7"]
+radius = 0.2
+height = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ero2x"]
+radius = 0.2
+height = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_23422"]
+radius = 0.2
+height = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l1x3h"]
 margin = 0.0
 radius = 0.2
 height = 1.0
@@ -79,3 +96,22 @@ shape = SubResource("CapsuleShape3D_ero2x")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, 0.1)
 
 [node name="Leg 1" type="RigidBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leg 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.9, 0)
+shape = SubResource("CapsuleShape3D_2t1d7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leg 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.9, 0)
+mesh = SubResource("CapsuleMesh_ero2x")
+
+[node name="Leg 2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17, -0.9, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leg 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+mesh = SubResource("CapsuleMesh_23422")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leg 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+shape = SubResource("CapsuleShape3D_l1x3h")
