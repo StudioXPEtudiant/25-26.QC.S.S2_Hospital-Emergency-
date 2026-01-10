@@ -115,3 +115,7 @@ mesh = SubResource("CapsuleMesh_23422")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Leg 2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
 shape = SubResource("CapsuleShape3D_l1x3h")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0.8, 0)
+sky_mode = 1
