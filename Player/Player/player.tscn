@@ -52,6 +52,8 @@ radius = 0.2
 height = 1.0
 
 [node name="Player" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+disable_mode = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -63,6 +65,7 @@ mesh = SubResource("CapsuleMesh_hoxq6")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="Head" type="RigidBody3D" parent="."]
+collision_layer = 255
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
@@ -92,9 +95,6 @@ mesh = SubResource("CapsuleMesh_stnjt")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
 shape = SubResource("CapsuleShape3D_ero2x")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, 0.1)
-
 [node name="Leg 1" type="RigidBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Leg 1"]
@@ -115,3 +115,7 @@ mesh = SubResource("CapsuleMesh_23422")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Leg 2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
 shape = SubResource("CapsuleShape3D_l1x3h")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0.8, 0)
+sky_mode = 1
