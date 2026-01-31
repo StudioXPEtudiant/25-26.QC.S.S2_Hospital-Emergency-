@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxfytgt5ux5ub"]
+
+[ext_resource type="PackedScene" uid="uid://bs434uct00o27" path="res://Player/Player/Hazmat/Universal Animation Library[Standard]/Unreal-Godot/UAL1_Standard.glb" id="1_svwok"]
+[ext_resource type="Script" uid="uid://bvlf6lgh1u8sw" path="res://Player/Player/Hazmat/Universal Animation Library[Standard]/Unreal-Godot/player.gd" id="2_8ebc5"]
+
+[node name="player" type="Node3D"]
+
+[node name="UAL1_Standard" parent="." instance=ExtResource("1_svwok")]
+script = ExtResource("2_8ebc5")

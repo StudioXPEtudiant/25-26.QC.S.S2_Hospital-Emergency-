@@ -14,3 +14,7 @@ config/name="Hospital Emergency"
 run/main_scene="uid://ccsnc3lxa2ihd"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[filesystem]
+
+import/blender/enabled=false

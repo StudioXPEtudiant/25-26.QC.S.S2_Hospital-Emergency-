@@ -65,7 +65,6 @@ mesh = SubResource("CapsuleMesh_hoxq6")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="Head" type="RigidBody3D" parent="."]
-collision_layer = 255
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)

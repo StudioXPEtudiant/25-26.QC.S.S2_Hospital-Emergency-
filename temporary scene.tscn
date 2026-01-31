@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccsnc3lxa2ihd"]
+[gd_scene load_steps=4 format=3 uid="uid://ccsnc3lxa2ihd"]
 
-[ext_resource type="PackedScene" uid="uid://y6uhsx3ywms4" path="res://Player/Player/player.tscn" id="1_hamos"]
+[ext_resource type="PackedScene" uid="uid://bxfytgt5ux5ub" path="res://survivor#player.tscn" id="1_hamos"]
+[ext_resource type="Script" uid="uid://tbrspag4q1fx" path="res://survivor#player.gd" id="2_xiyr4"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xiyr4"]
 
@@ -10,11 +11,12 @@
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("PlaneMesh_xiyr4")
 
-[node name="Player" parent="." instance=ExtResource("1_hamos")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158563, 1.37683, 0.157732)
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4.5, 6.5)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.00254817, 0.999997, 0, -0.999997, 0.00254817, 0, 7.75992, 0)
+
+[node name="player" parent="." instance=ExtResource("1_hamos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87968, 0, -2.51238)
+script = ExtResource("2_xiyr4")
